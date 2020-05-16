@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kin Rai D</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <style>
+        html {
+            background: hsl(0, 0%, 29%);
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="section">
+        <div class="container has-text-centered">
+            <h2 class="title is-3 has-text-white">กินไรดี ?</h2>
+            <h1 id="result-text" class="title is-1 has-text-success"></h1>
+            <button id="random-button" class="button is-info is-large">สุ่ม</button>
+        </div>
+    </section>
+</body>
+<script>
+    const foods = ["ข้าวผัดหมู", "ข้าวผัดกุ้ง", "ข้าวผัดปู", "ข้าวผัดทะเล", "ข้าวผัดกระเทียม", "ข้าวไข่ดาว", "ข้าวไข่เจียว", "ข้าวไข่พระอาทิตย์", "ข้าวแกงกะหรี่", "ก๋วยเตี๋ยวหมู", "ก๋วยเตี๋ยวเรือ", "ก๋วยเตี๋ยวลูกชิ้นปลา", "ขนมจีนน้ำพริก", "ขนมจีนน้ำยา", "ข้าวเหนียวไก่ย่าง", "หมูน้ำตก", "ข้าวขาหมู", "ข้าวมันไก่", "ผัดไท", "มัสมั่น", "พิซซ่า", "ซูชิ", "ข้าวผัดกระเทียม", "ข้าวอบเผือก", "กระเพาะปลา", "สุกี้น้ำ", "สุกี้แห้ง", "ผัดมาม่า", "ยำมาม่า", "ข้าวผัดอเมริกัน", "ก๋วยจั๊บ", "ปลาทอด", "กุ้งชุดแป้งทอด", "ทอดมันกุ้ง", "ห่อหมก", "ปลาดุกฟู", "ไข่ต้ม", "ก๋วยเตี๋ยวคั่วไก่", "ปลากระพงทอดน้ำปลา", "ปลากระพงนึ่งมะนาว", "ปลากระพงนึ่งซี่อ๊ิว", "ทอดมันปลากราย", "ข้าวไข่พะโล้", "ราดหน้า", "ก๋วยเตี๋ยวเป็ด", "ก๋วยเตี๋ยวหมูตุ๋น", "ไก่ทอด", "แฮมเบอร์เกอร์", "กุ้งอบวุ้นเส้น", "แซนวิช", "ข้าวหมูย่างเกาหลี", "ก๋วยเตี๋ยวลุยสวน", "ข้าวหมูแดง", "ต้มยำกุ้ง", "ข้าวเหนียวหมูปิ้ง", "สปาร์เก็ตตี้", "โจ๊ก", "ข้าวต้ม", "ข้าวต้มปลา", "ข้ามต้มกุ้ง", "ข้ามต้มกระเพเาะหมู", "ติ่มซำ", "บะหมี่เกี๊ยว", "บะหมี่หมูแดง", "มาม่าคัพ", "เย็นตาโฟ", "ไข่ตุ๋น", "ไข่ลูกเขย", "ขนมจีบ", "สเต็ก", "เกี๊ยวน้ำ", "ข้าวหน้าเป็ด", "ข้าวหมูกรอบ", "หมูสะเต๊ะ", "ไก่อบซอสเทอริยากิ", "ผัดซีอิ๊ว"];
+
+    const randomButton = document.querySelector("#random-button");
+    const resultText = document.querySelector("#result-text");
+
+    randomButton.addEventListener("click", () => {
+        const result = foods[Math.floor(Math.random() * foods.length)];
+        resultText.textContent = result;
+    });
+</script>
+
+</html>
